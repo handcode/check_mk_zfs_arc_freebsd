@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Author: Jens Giessmann jg@handcode.de
+
+# this plugin collects zfs_arc_stats data for check_mk zfs_arc_cache check
+# share/check_mk/checks/zfs_arc_cache
+
+echo '<<<zfs_arc_cache>>>'
+#sysctl -q kstat.zfs.misc.arcstats |  sed 's/kstat.zfs.misc.arcstats.//g' | sed 's/: / = /g'
+sysctl -e -q kstat.zfs.misc.arcstats |  sed 's/kstat.zfs.misc.arcstats.//g'
