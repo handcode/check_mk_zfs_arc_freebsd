@@ -6,5 +6,5 @@
 # share/check_mk/checks/zfs_arc_cache
 
 echo '<<<zfs_arc_cache>>>'
-#sysctl -q kstat.zfs.misc.arcstats |  sed 's/kstat.zfs.misc.arcstats.//g' | sed 's/: / = /g'
-sysctl -e -q kstat.zfs.misc.arcstats |  sed 's/kstat.zfs.misc.arcstats.//g'
+sysctl -q kstat.zfs.misc.arcstats |  sed 's/kstat.zfs.misc.arcstats.//g' | sed 's/: / = /g'
+#sysctl -e -q kstat.zfs.misc.arcstats |  sed 's/kstat.zfs.misc.arcstats.//g'
