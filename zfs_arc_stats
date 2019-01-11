@@ -7,4 +7,3 @@
 
 echo '<<<zfs_arc_cache>>>'
 sysctl -q kstat.zfs.misc.arcstats |  sed -e 's/kstat.zfs.misc.arcstats.//g' -e 's/: / = /g'
-#sysctl -e -q kstat.zfs.misc.arcstats |  sed 's/kstat.zfs.misc.arcstats.//g'
